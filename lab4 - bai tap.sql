@@ -35,10 +35,10 @@ INSERT INTO soThueBao VALUES('0922223116','TT','2019-05-20')
 INSERT INTO soThueBao VALUES('0922224116','TT','2019-05-20')
 SELECT * FROM soThueBao
 
-INSERT INTO khachHang VALUES('Do Son','123123123','Ha Noi',1)
-INSERT INTO khachHang VALUES('Do Son','123123123','Ha Noi',5)
-INSERT INTO khachHang VALUES('Khai','123412341','Hai Phong',2)
-INSERT INTO khachHang VALUES('Long','123456789','Nam Dinh',3)
+INSERT INTO khachHang VALUES('Khanh','123123123','Ha Noi',1)
+INSERT INTO khachHang VALUES('Tu','123123123','Ha Noi',5)
+INSERT INTO khachHang VALUES('Khiem','123412341','Hai Phong',2)
+INSERT INTO khachHang VALUES('Linh','123456789','Nam Dinh',3)
 INSERT INTO khachHang VALUES('Luong','456456789','Thai Binh',4)
 SELECT * FROM khachHang
 
@@ -49,7 +49,6 @@ SELECT * FROM khachHang
 SELECT * FROM khachHang
 --b) Hiển thị toàn bộ thông tin của các số thuê bao của công ty.
 SELECT * FROM soThueBao
-
 --5. Viết các câu lệnh truy vấn để lấy
 --a) Hiển thị toàn bộ thông tin của thuê bao có số: 0123456789
 SELECT * FROM soThueBao WHERE soTB = 0981806996
@@ -79,7 +78,6 @@ FROM soThueBao WHERE NgayDK = '2019-07-17'
 --d) Hiển thị toàn bộ thông tin về khách hàng và thuê bao của tất cả các số thuê bao.
 SELECT * FROM soThueBao,khachHang
 
-
 --7. Thay đổi những thay đổi sau trên cơ sở dữ liệu
 --a) Viết câu lệnh để thay đổi trường ngày đăng ký là not null.
 ALTER TABLE soThueBao ALTER COLUMN NgayDK date NOT NULL
@@ -93,8 +91,6 @@ ADD CONSTRAINT CK_number CHECK (soTB like '09%')
 --d) Viết câu lệnh để thêm trường số điểm thưởng cho mỗi số thuê bao.
 ALTER TABLE soThueBao
 ADD diemThuong int
-
-
 --8. Thực hiện các yêu cầu sau
 --◦ View_KhachHang: Hiển thị các thông tin Mã khách hàng, Tên khách hàng, địa chỉ
 CREATE VIEW View_KhachHang
